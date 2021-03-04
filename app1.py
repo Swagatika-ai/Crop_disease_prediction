@@ -31,7 +31,7 @@ def main():
 main()
     
 
-MODEL_PATH="C:\\Users\\LENOVO\\Documents\\Cotton-Disease-Prediction-Deep-Learning-master\\model_resnet152V2.h5"
+MODEL_PATH="model_resnet152V2.h5"
 from keras.models import load_model
 model = load_model(MODEL_PATH)
 @st.cache(allow_output_mutation=True)
@@ -58,7 +58,7 @@ def decode_img(image):
 #with st.spinner("Loading Model into Memory......"):
     #model = load_model()  
 
-def file_selector(folder_path='C:\\Users\\LENOVO\\Documents\\Cotton-Disease-Prediction-Deep-Learning-master\\Datasets\\testing'):
+def file_selector(folder_path='.'):
     filenames = os.listdir(folder_path)
     selected_filename = st.selectbox('Select a file', filenames)
     return os.path.join(folder_path, selected_filename)
