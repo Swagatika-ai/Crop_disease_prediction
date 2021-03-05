@@ -31,7 +31,7 @@ def main():
 main()
     
 
-MODEL_PATH="model_resnet152V2.h5"
+MODEL_PATH="model_inception.h5"
 from keras.models import load_model
 model = load_model(MODEL_PATH)
 @st.cache(allow_output_mutation=True)
