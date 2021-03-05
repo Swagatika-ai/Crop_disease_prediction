@@ -67,7 +67,7 @@ def file_selector(folder_path='.'):
     return os.path.join(folder_path, selected_filename)
 
     
-#file = st.file_uploader("Please Upload file",type=["csv","png","jpg"])
+filename = st.file_uploader("Please Upload file",type=["csv","png","jpg"])
                      
 def import_and_predict(image_data,model):
     size=(224,224)
@@ -85,7 +85,7 @@ def import_and_predict(image_data,model):
 #if file is None:
    # st.text("please upload an image file")
 #else:
-filename = file_selector()
+#filename = file_selector()
 st.write('You selected `%s`' % filename)
 image = Image.open(filename)
 st.image(image,use_column_width=True)
